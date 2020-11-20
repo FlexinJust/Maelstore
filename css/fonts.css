@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Bitsumishi Pro';
+	font-display: swap;
+	src: url('../fonts/Bitsumishi Pro/Bitsumishi Pro.eot');
+	src: local('☺'), url('../fonts/Bitsumishi Pro/Bitsumishi Pro.woff') format('woff'), url('../fonts/Bitsumishi Pro/Bitsumishi Pro.ttf') format('truetype'), url('../fonts/Bitsumishi Pro/Bitsumishi Pro.svg') format('svg');
+	font-weight: 500; /*Medium*/
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Regular';
+	font-display: swap;
+	src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
+	src: local('☺'), url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular/Roboto-Regular.svg') format('svg');
+	font-weight: 400; /*Regular*/
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto-Bold';
+	font-display: swap;
+	src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
+	src: local('☺'), url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto-Bold/Roboto-Bold.svg') format('svg');
+	font-weight: 700; /*Bold*/
+	font-style: normal;
+}

@@ -2,7 +2,7 @@ html{
 	font-size: 10px;
 }
 body{
-	font-family:'Roboto-Regular', sans-serif;
+	font-family: 'Roboto-Regular', sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	color: #00131e;
@@ -15,6 +15,22 @@ body{
 	max-width: 1310px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+.sidebar{
+	position: fixed;
+	max-width: 300px;
+	width: 100%;
+	height: 100%;
+	left: -100%;
+	background-color: #a6aaada8;
+	border-right: 2px solid #acacac;
+	transition: all 300ms;
+}
+.sidebar.active{
+	left: 0px;
+}
+.sidebar__menu-list{
+	
 }
 .header {
 	padding: 15px 0;
@@ -37,6 +53,7 @@ body{
 	height: 2px;
 	border-radius: 2px;
 	background-color: #fff;
+	transition: all 300ms;
 }
 .burger__line{
 	top: 5px;
@@ -47,18 +64,25 @@ body{
 .burger__icon:after{
 	bottom: 0;
 }
-.header__menu-burger {
-	display: none;
+.burger__line.active{
+	transform: scale(0);
+}
+.burger__icon.active:before{
+	top: 5px;
+	transform: rotate(45deg);
+}
+.burger__icon.active:after{
+	top: 5px;
+	transform: rotate(-45deg);
 }
 .menu__title {}
 .menu__list {}
 .menu__item {}
 
 .header__logo {
-
 }
 .header__logo-title {
-	font-family: ;
+	font-family: "Bitsumishi Pro", sans-serif;
 	font-size: 21px;
 	color: #fff;
 	letter-spacing: 5px;
@@ -93,15 +117,14 @@ body{
 }
 .header__menu {}
 .header__menu-list {
-
 }
 .header__menu-item {
 	display: inline-block;
 	margin-right: 20px;
 }
 .header__menu-link {
+	font-family: 'Roboto-Bold', sans-serif;
 	font-size: 13px;
-	font-weight: 700;
 	letter-spacing: 1px;
 	color: #fff;
 }
