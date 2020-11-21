@@ -43,7 +43,7 @@ body{
    z-index: 10;
    transition: all 300ms;
 }
-#sidebar.active .sidebar-overlay{
+#sidebar.active + .sidebar-overlay{
 	display: block;
 }
 
@@ -58,6 +58,7 @@ body{
 	width: 20px;
 	height: 12px;
 	margin-right: 15px;
+	z-index: 20;
 }
 .burger__line,
 .burger__icon:before,
@@ -90,15 +91,12 @@ body{
 	top: 5px;
 	transform: rotate(-45deg);
 }
-
 .header__logo-title {
 	font-family: "Bitsumishi Pro", sans-serif;
 	font-size: 21px;
 	color: #fff;
 	letter-spacing: 5px;
 	text-transform: uppercase;
-}
-.header__search {
 }
 .search__form {
 	margin: 0 20px;
