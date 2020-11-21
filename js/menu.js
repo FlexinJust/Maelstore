@@ -6,11 +6,11 @@
 //     menuBody.classList.toggle('active');
 // };
 
-document.addEventListener('click', (e) => {
-    if(e.pageX > parseInt(window.getComputedStyle(menuBody).width)) {
-        menuBody.classList.remove('active');
-    }
-});
+// document.addEventListener('click', (e) => {
+//     if(e.pageX > parseInt(window.getComputedStyle(menuBody).width)) {
+//         menuBody.classList.remove('active');
+//     }
+// });
 
 // function openMenu() {
 // 	document.getElementById("sidebar").classList.toggle('active');
