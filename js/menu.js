@@ -24,10 +24,20 @@
 // 	menuSidebar.classList.toggle('active');
 // };
 
+// SIDEBAR
+const sidebar = document.getElementById('sidebar');
+const overlay = document.querySelector('.sidebar-overlay');
+const burger = document.getElementById('burger');
 
-burger__icon.onclick = function () {
-	document.getElementById("sidebar").classList.toggle('active');
+burger.onclick = function () {
+	sidebar.classList.toggle('active');
 	this.classList.toggle('active');
-	// document.querySelector('.sidebar-overlay').classList.toggle('active');
-
 };
+overlay.onclick = function () {
+	burger.classList.remove('active');  
+   sidebar.classList.remove('active');   
+};
+
+
+
+
