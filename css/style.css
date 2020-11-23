@@ -10,6 +10,8 @@ body{
 .d-flex{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .container{
 	max-width: 1310px;
@@ -71,10 +73,11 @@ body{
 	text-align: center;
 	max-width: 300px;
 	width: 100%;
-	margin-top: 27px;
+	margin-top: 15px;
+	border-bottom: 1px solid #acacac;
 }
-.sidebar__menu-item {
-	
+.sidebar__menu-item{
+	margin-bottom: 3px;
 }
 .sidebar__menu-link{
 	display: inline-block;
@@ -84,25 +87,42 @@ body{
 	font-size: 14px;
 	font-weight: 300;
 }
-.sidebar__menu-link.active{
-	background-color: rgba(101, 101, 101, 0.69);
-}
-
-.sidebar__menu-link--active,
+.sidebar__menu-link.active,
 .sidebar__menu-link:hover {
 	background-color: rgba(101, 101, 101, 0.69);
 }
-.sidebar__subscr {}
-.sidebar__subscr-list {}
-.sidebar__subscr-item {}
-.sidebar__subscr-link {}
-.sidebar__subscr-brand {}
+.sidebar__subscr {
+	color: #0097f6;
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 20px;
+}
+.sidebar__subscr-list {
+	margin-top: 15px;
+}
+.sidebar__subscr-item {
+	margin-bottom: 20px;
+}
+.sidebar__subscr-link {
+	color: #00131e;
+	line-height: 35px;
+	height: 35px;
+}
+.sidebar__subscr-brand {
+	margin-right: 20px;
+}
 
 
 .header {
-	padding: 15px 0;
+	padding: 15px 0px 0px;
 	min-height: 55px;
 	background-color: #0097f6;
+}
+.burger__icon,
+.header__logo,
+.header__search,
+.header__menu{
+	margin-bottom: 15px;
 }
 .burger__icon {
 	cursor: pointer;
@@ -150,6 +170,11 @@ body{
 	letter-spacing: 5px;
 	text-transform: uppercase;
 }
+@media(min-width: 500px){
+	.header__search{
+		margin-right: auto;
+	}
+}
 .search__form {
 	margin: 0 20px;
 }
@@ -175,7 +200,6 @@ body{
 	padding: 0px 10px 0px 30px;
 	border-radius: 4px;
 }
-.header__menu {}
 .header__menu-list {
 }
 .header__menu-item {
