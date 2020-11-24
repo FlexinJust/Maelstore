@@ -7,6 +7,18 @@ body{
 	font-weight: 400;
 	color: #00131e;
 }
+.btn{
+	width: 100px;
+	color: #00131e;
+	font-size: 2rem;
+	font-family: "Segoe UI", sans-serif;
+	font-weight: 700;
+	padding: 4px 10px 6px;
+	border-radius: 8px;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #0097f6;
+}
 .d-flex{
 	display: flex;
 	align-items: center;
@@ -19,39 +31,58 @@ body{
 	margin: 0 auto;
 }
 .sidebar{
-	padding: 20px 0;
+	padding: 20px 15px;
 	position: fixed;
-	max-width: 300px;
+	max-width: 230px;
 	width: 100%;
 	height: 100%;
 	left: -100%;
-	background-color: #a6aaada8;
+	background-color: #fff;
 	border-right: 2px solid #acacac;
 	transition: all 300ms;
 	z-index: 20;
+	margin-top: 55px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 .sidebar.active {
 	left: 0px;
 }
 .sidebar-overlay {
    background-color: rgba(0, 0, 0, 30%);
-   display: none;
    position: fixed;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
    z-index: 10;
+   opacity: 0;
+   visibility: hidden;
    transition: all 300ms;
 }
 #sidebar.active + .sidebar-overlay{
-	display: block;
+	opacity: 1;
+	visibility: visible;
 }
 .sidebar__wrapper{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+/*=================inLogin============
+===================================*/
+.sidebar__inLogin{
+	text-align: center;
+}
+.inLogin__text{
+color: #00131e;
+font-size: 1.6rem;
+font-weight: 700;
+line-height: 1.2;
+margin-bottom: 10px;
+}
+/*=================/inLogin============
+===================================*/
 .sidebar__user-block {
 	display: contents;
 	margin-bottom: 27px;
@@ -200,8 +231,6 @@ body{
 	padding: 0px 10px 0px 30px;
 	border-radius: 4px;
 }
-.header__menu-list {
-}
 .header__menu-item {
 	display: inline-block;
 	margin-right: 20px;
@@ -212,3 +241,77 @@ body{
 	letter-spacing: 1px;
 	color: #fff;
 }
+
+/*================= POPUP ============
+===================================*/
+.popupLogin {
+	position: relative;
+	margin: 100px auto 0px;
+	max-width: 290px;
+	width: 100%;
+	text-align: center;
+	/*opacity: 0;
+	visibility: hidden;*/
+	display: none;
+	transition: all 0.8s ease 0s;
+}
+.popupLogin:target{
+	/*opacity: 1;
+	visibility: visible;*/
+	display: block;
+}
+.popup__close{
+	position: absolute;
+	font-size: 30px;
+	top: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #000;
+	text-decoration: none;
+}
+.popup-log__logo {
+	margin-bottom: 10px; 
+}
+.popup-logo__img {
+	margin-bottom: 15px;
+}
+.popup-log__title {
+	color: #0097f6;
+	font: 246%/45px "Bitsumishi Pro", sans-serif;
+	letter-spacing: 3.7px;
+}
+.popup__from {}
+.popup__lable {}
+.popup__input{
+	width: 100%;
+	margin-top: 18px;
+	border-bottom: 1px solid #0097f6;
+}
+.popup__input::placeholder{
+	padding-bottom: 5px;
+	color: #0097f6;
+	font: 1.4rem/23px 'Roboto', sans-serif;
+	font-weight: 300;
+	letter-spacing: 1.4px;
+	text-align: left;
+}
+.btn-popup {
+	display: block;
+	width: 100%;
+	padding: 4px 10px 3px;
+	border-radius: 6px;
+	color: #e7edef;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	letter-spacing: 1.4px;
+	line-height: 23px;
+	background-color: #33d684;
+	margin: 17px 0 20px;
+}
+.popup__password-rembr {
+	color: #0097f6;
+	font: 1.4rem/23px 'Roboto', sans-serif;
+	letter-spacing: 1.4px;
+}
+/*================= /POPUP ============
+===================================*/
