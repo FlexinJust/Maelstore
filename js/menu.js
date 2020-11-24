@@ -38,6 +38,15 @@ overlay.onclick = function () {
    sidebar.classList.remove('active');   
 };
 
+let verticalMenu = document.querySelector('.sidebar__menu-list'),
+    items = verticalMenu.querySelectorAll('.sidebar__menu-link');
+
+verticalMenu.onclick = function(e) {
+  for (let i = 0; i < items.length; i++) {
+    items[i].classList.remove('active');
+  }
+  e.target.classList.add('active');
+}
 
 
 
