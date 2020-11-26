@@ -9,15 +9,16 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="wrapper">
 <nav id="sidebar" class="sidebar">
   <div class="sidebar__wrapper">
 
-    <div class="sidebar__inLogin d-flex">
+    <div class="sidebar__inLogin inLogin d-flex">
       <div class="sidebar__user-icon">
         <img class="sidebar__user-ava" src="images/user-ava/account.svg" alt="">
       </div>
-      <div class="inLogin__text">Чтобы продолжить Пожалуйста войдите или <a href="#">зарегистрируйтесь</a></div>
-      <a href="#popupLogin" class="inLogin__btn btn">Войти</a>
+      <div class="inLogin__text">Чтобы продолжить Пожалуйста войдите или <a class="popup-link" href="#popup">зарегистрируйтесь</a></div>
+      <a href="#popup" class="inLogin__btn btn popup-link">Войти</a>
     </div>
 
  <!--  <div class="sidebar__user-block">
@@ -72,8 +73,7 @@
 
   </div>
 </nav>
-<div class="sidebar-overlay"></div>
-
+<!-- <div class="sidebar-overlay"></div> -->
 <header class="header d-flex">
     <div id="burger" class="burger__icon">
       <span class="burger__line"></span>
@@ -95,7 +95,7 @@
           <a href="#" class="header__menu-link">Магазины</a>
         </li>
         <li class="header__menu-item">
-          <a href="#" class="header__menu-link">Регистрация</a>
+          <a href="#popup" class="header__menu-link popup-link">Регистрация</a>
         </li>
         <li class="header__menu-item">
           <a href="#" class="header__menu-link">Помощь</a>
@@ -111,24 +111,31 @@
 </header>
 
 <!-- POPUP INLOGIN -->
-<div id="popupLogin" class="popupLogin">
-  <a class="popup__close" href="#">X</a>
-  <div class="popup-log__logo">
-    <img class="popup-logo__img" src="images/popup-logo.svg" alt="logo" />
-    <div class="popup-log__title">Stores Plex</div>
+<div id="popup" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <a class="popup__close close-popup" href="#">X</a>
+      <div class="popup-log__logo">
+        <img class="popup-logo__img" src="images/popup-logo.svg" alt="logo" />
+        <div class="popup-log__title">Stores Plex</div>
+      </div>
+      <form class="popup__form-login" action="#" method="POST">
+        <lable class="popup__lable">
+          <input class="popup__input" type="text" placeholder="Email" />
+        </lable>
+        <lable class="popup__lable">
+          <input class="popup__input" type="text" placeholder="Пароль" />
+        </lable>
+        <button class="popup__btn btn-popup">Войти</button> 
+      </form>
+      <a class="popup__password-rembr" href="#">Забыли пароль?</a>
+    </div>
   </div>
-  <form class="popup__from" action="#" method="POST">
-    <lable class="popup__lable">
-      <input class="popup__input" type="text" placeholder="Email" />
-    </lable>
-    <lable class="popup__lable">
-      <input class="popup__input" type="text" placeholder="Пароль" />
-    </lable>
-    <button class="popup__btn btn-popup">Войти</button> 
-  </form>
-  <a class="popup__password-rembr" href="#">Забыли пароль?</a>
 </div>
 <!--/-- POPUP INLOGIN -->
+</div>
+<!-- форма реги
+https://login.techcrunch.com/account/create?src=techcrunch&add=1&done=https%3A%2F%2Fapi.login.techcrunch.com%2Foauth2%2Frequest_auth%3Fclient_id%3Ddj0yJmk9Ykh1ZTdaUEJPRHhJJmQ9WVdrOVFsWTJjV0YwTldFbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1jNw--%26redirect_uri%3Dhttps%253A%252F%252Foidc.techcrunch.com%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520openid2%2520sdps-r%26src%3Dtechcrunch%26state%3DeyJhbGciOiJSUzI1NiIsImtpZCI6IjZmZjk0Y2RhZDExZTdjM2FjMDhkYzllYzNjNDQ4NDRiODdlMzY0ZjcifQ.eyJyZWRpcmVjdFVyaSI6Imh0dHBzOi8vdGVjaGNydW5jaC5jb20vIn0.f8oYyOMkYFtgmyxtr93QiOr3DENqqkqX0KWG7MXRz530BtNZOBlJWTK6FZMLPm061NwzB4u0V4xSpc92sQ85gPUN8pL4W5fx6UWSAH5iZj-BmGuh4Oe-uIkPYOPrRG7mqVsLPN2-GJlP4AZJgCtrlGn9SUeDOAW_LnYGVg2EaQs%26nonce%3D9W0iQAVjK4sow0kWofAPTvJhgb9gAYn5&specId=usernameregsimplified -->
 
 <!-- https://flexinjust.github.io/Maelstore/ -->
 <script src="js/popup.js"></script>
