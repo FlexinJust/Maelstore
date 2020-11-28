@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 // Пишем переменную при которой будет открываться любой объект с классом .popup-link Чтобы ПопАп открывался при клике на любой объект с классом .popup-link 
 const popupLinks = document.querySelectorAll('.popup-link');
 // Пишем переменную body для блокирования скролла внутри него
@@ -48,7 +50,8 @@ if (curentPopup && unlock) {
 	}
 	curentPopup.classList.add('open');
 	curentPopup.addEventListener("click", function (e) {
-		if (!e.target.closest('.popup__content')) {
+		if (!e.target.closest('.popup__content'))
+		if (!e.target.closest('.popup__lable-row')) {
 			popupClose(e.target.closest('.popup'));
 	     }
 	  }); 
@@ -104,7 +107,7 @@ setTimeout(function () {
 // ЗАКРЫТИЕ POPUP КЛАВИШЕЙ ESC
 document.addEventListener('keydown', function (e) {
 	if (e.which === 27) {
-		const popupActive = document.querySelector('.popupLogin.open');
+		const popupActive = document.querySelector('.popup.open');
 		popupClose(popupActive);
 	}
 });
@@ -134,3 +137,24 @@ document.addEventListener('keydown', function (e) {
 		Element.prototype.msMatchesSelector;
 	}
 	})();
+
+
+document.querySelectorAll('.popup__lable-tab').forEach((item) => 
+	item.addEventListener('click', function(e) {
+		e.preventDefault();
+		const id = e.target.getAttribute('href').replace('#', '')
+
+		document.querySelectorAll('.popup__lable-tab').forEach(
+			(child) => child.classList.remove('active')
+		);
+		document.querySelectorAll('.popup__form').forEach(
+			(child) => child.classList.remove('active')
+		);
+
+		item.classList.add('active');
+		document.getElementById(id).classList.add('active');
+
+	})
+);
+document.querySelector('.popup__lable-tab').click();
+})

@@ -68,7 +68,7 @@ body{
 	flex-direction: column;
 	align-items: center;
 }
-/*=================inLogin============
+/*================= inLogin ============
 ===================================*/
 .sidebar__inLogin{
 	text-align: center;
@@ -80,7 +80,7 @@ font-weight: 700;
 line-height: 1.2;
 margin-bottom: 10px;
 }
-/*=================/inLogin============
+/*================= /inLogin ============
 ===================================*/
 .sidebar__user-block {
 	display: contents;
@@ -141,10 +141,10 @@ margin-bottom: 10px;
 .sidebar__subscr-brand {
 	margin-right: 20px;
 }
-
+/*===================== /SIDEBAR==============
+============================================*/
 .header {
 	padding: 15px;
-	min-height: 55px;
 	background-color: #0097f6;
 }
 .burger__icon {
@@ -243,6 +243,18 @@ margin-bottom: 10px;
 	letter-spacing: 1px;
 	color: #fff;
 }
+/*================== MAIN =============
+=====================================*/
+
+/*================== /MAIN =============
+=====================================*/
+
+/*================== FOOTER ==========
+======================================*/
+
+/*================== /FOOTER ==========
+======================================*/
+
 
 /*================= POPUP ============
 ===================================*/
@@ -263,27 +275,49 @@ margin-bottom: 10px;
 	opacity: 1;
 	visibility: visible;
 }
-.popup.open .popup__content{
+.popup.open .popup__body{
 	opacity: 1;
 	visibility: visible;
-	transform:  perspective(600px) translate(0px, 0px) rotateX(0deg);
 }
 .popup__body{
 	min-height: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 30px 10px;
+}
+.popup__lable-row{
+	max-width: 400px;
+	width: 100%;
+}
+.popup__lable-tab {
+	color: #000;
+	background-color: #fff;
+	font-weight: 700;
+	padding: 20px;
+	display: inline-block;
+	border-radius: 10px 10px 0 0;
+	cursor: pointer;
+	transition: all 0.8s ease 0s;
+}
+.popup__lable-tab.active{
+	background-color: #ffffffd4;
+	color: #33d684;
+}
+.popup__form{
+	display: none;
+}
+.popup__form.active{
+	display: block;
 }
 .popup__content{
+	max-width: 400px;
+	width: 100%;
 	position: relative;
 	padding: 30px;
-	border-radius: 10px;
+	border-radius: 0px 10px 10px 10px;
 	background-color: #fff;
 	text-align: center;
-	opacity: 0;
-	transition: all 0.8s ease 0s;
-	transform:  perspective(600px) translate(0px, -100%) rotateX(40deg);
 }
 .popup__close{
 	position: absolute;
@@ -293,11 +327,6 @@ margin-bottom: 10px;
 	color: #000;
 	text-decoration: none;
 }
-/*.popup.open{
-	opacity: 1;
-	visibility: visible;
-	transform:  perspective(600px) translate(0px, 0%) rotateX(0deg);
-}*/
 .popup-log__logo {
 	margin-bottom: 10px; 
 }
@@ -310,12 +339,29 @@ margin-bottom: 10px;
 	letter-spacing: 3.7px;
 }
 .popup__form {}
-.popup__lable {}
+/*.popup__lable {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	color: #33d684;
+	transition: .3s;
+}*/
 .popup__input{
 	width: 100%;
-	margin-top: 18px;
+	margin-top: 15px;
+	padding-bottom: 7px;
+	background-color: transparent;
 	border-bottom: 1px solid #0097f6;
+	transition: .3s;
 }
+.popup__input:focus{
+	border-bottom: 1px solid #33d684;
+}
+/*.popup__input:focus ~ .popup__lable{
+	top: -18px;
+	font-size: 12px;
+	сolor: ##33d684;
+}*/
 .popup__input::placeholder{
 	padding-bottom: 5px;
 	color: #0097f6;
@@ -336,11 +382,22 @@ margin-bottom: 10px;
 	line-height: 23px;
 	background-color: #33d684;
 	margin: 17px 0 20px;
+	transition: .3s;
 }
-.popup__password-rembr {
+.btn-popup:focus,
+.btn-popup:hover{
+	background-color: rgba(0, 113, 240, 0.7);
+} 
+.popup__lable-tab--link {
 	color: #0097f6;
 	font: 1.4rem/23px 'Roboto', sans-serif;
 	letter-spacing: 1.4px;
+	transition: .3s;
+	padding: 0;
 }
+.popup__links:hover{
+	color: #78b3d8d1;
+}
+
 /*================= /POPUP ============
 ===================================*/

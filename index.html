@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrapper">
+<div class="wrapper">
 <nav id="sidebar" class="sidebar">
   <div class="sidebar__wrapper">
 
@@ -113,31 +113,72 @@
 <!-- POPUP INLOGIN -->
 <div id="popup" class="popup">
   <div class="popup__body">
+    <div id="lable-tab" class="popup__lable-row">
+      <a class="popup__lable-tab active" href="#tab-1">Авторизация</a>
+      <a class="popup__lable-tab" href="#tab-2">Регистрация</a>
+    </div>
     <div class="popup__content">
       <a class="popup__close close-popup" href="#">X</a>
       <div class="popup-log__logo">
         <img class="popup-logo__img" src="images/popup-logo.svg" alt="logo" />
         <div class="popup-log__title">Stores Plex</div>
       </div>
-      <form class="popup__form-login" action="#" method="POST">
-        <lable class="popup__lable">
-          <input class="popup__input" type="text" placeholder="Email" />
-        </lable>
-        <lable class="popup__lable">
-          <input class="popup__input" type="text" placeholder="Пароль" />
-        </lable>
-        <button class="popup__btn btn-popup">Войти</button> 
+
+      <form id="tab-1" class="popup__form active" action="#" method="POST">
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="email" placeholder="Введите email" />
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="password" placeholder="Введите пароль" />
+        <button class="popup__btn btn-popup">Войти</button>
+        <a class="popup__lable-tab popup__lable-tab--link" href="#tab-3">Забыли пароль?</a>
       </form>
-      <a class="popup__password-rembr" href="#">Забыли пароль?</a>
+
+      <form id="tab-3" class="popup__form" action="#" method="POST">
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="email" placeholder="Введите Ваш email" />
+        <button class="popup__btn btn-popup">Отправить</button>
+      </form>
+
+      <form id="tab-2" class="popup__form" action="#" method="POST">
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="email" placeholder="Введите email адрес" />
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="password" placeholder="Придумайте пароль" />
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="password" placeholder="Повторите пароль" />
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="text" placeholder="Страна" />
+        <lable class="popup__lable"></lable>
+        <input class="popup__input" type="text" placeholder="Город" />
+
+        <button class="popup__btn btn-popup">Регистрация</button>
+        <div class="pact">
+          <input type="checkbox" class="popup__checkbox">
+          <label class="popup__checkbox-label">
+            Ознакомлен(-a) и принимаю <a class="popup__links" href="#">условия регистрации
+            и обработки персональных данных</a></label>
+          </div>
+        </form>
+
+      </div>
     </div>
   </div>
-</div>
 <!--/-- POPUP INLOGIN -->
 </div>
 <!-- форма реги
 https://login.techcrunch.com/account/create?src=techcrunch&add=1&done=https%3A%2F%2Fapi.login.techcrunch.com%2Foauth2%2Frequest_auth%3Fclient_id%3Ddj0yJmk9Ykh1ZTdaUEJPRHhJJmQ9WVdrOVFsWTJjV0YwTldFbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1jNw--%26redirect_uri%3Dhttps%253A%252F%252Foidc.techcrunch.com%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520openid2%2520sdps-r%26src%3Dtechcrunch%26state%3DeyJhbGciOiJSUzI1NiIsImtpZCI6IjZmZjk0Y2RhZDExZTdjM2FjMDhkYzllYzNjNDQ4NDRiODdlMzY0ZjcifQ.eyJyZWRpcmVjdFVyaSI6Imh0dHBzOi8vdGVjaGNydW5jaC5jb20vIn0.f8oYyOMkYFtgmyxtr93QiOr3DENqqkqX0KWG7MXRz530BtNZOBlJWTK6FZMLPm061NwzB4u0V4xSpc92sQ85gPUN8pL4W5fx6UWSAH5iZj-BmGuh4Oe-uIkPYOPrRG7mqVsLPN2-GJlP4AZJgCtrlGn9SUeDOAW_LnYGVg2EaQs%26nonce%3D9W0iQAVjK4sow0kWofAPTvJhgb9gAYn5&specId=usernameregsimplified -->
+<!-- форма реги 2в1
+https://www.the-village.ru/business/simple/367877-moshenniki-v-chernuyu-pyatnitsu
+ -->
+ <!-- https://www.cosmo.ru/ -->
+ <main>
+  
+</main>
 
-<!-- https://flexinjust.github.io/Maelstore/ -->
+<footer>
+  
+</footer>
+
 <script src="js/popup.js"></script>
 <script src="js/menu.js"></script>
 </body>
