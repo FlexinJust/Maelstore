@@ -82,6 +82,9 @@ margin-bottom: 10px;
 }
 /*================= /inLogin ============
 ===================================*/
+.sidebar-wrraper{
+	display: none;
+}
 .sidebar__user-block {
 	display: contents;
 	margin-bottom: 27px;
@@ -141,9 +144,20 @@ margin-bottom: 10px;
 .sidebar__subscr-brand {
 	margin-right: 20px;
 }
+
 /*===================== /SIDEBAR==============
 ============================================*/
 .header {
+	padding: 15px;
+	/*background-color: #0097f6;*/
+	background: rgb(45,139,255);
+	background: -moz-linear-gradient(top, rgba(45,139,255,1) 0%, rgba(37,124,231,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(45,139,255,1) 0%,rgba(37,124,231,1) 100%);
+	background: linear-gradient(to bottom, rgba(45,139,255,1) 0%,rgba(37,124,231,1) 100%);
+	box-shadow: 0 0 24px 0 rgba(42, 132, 244, 0.21);
+	margin-bottom: 20px;
+}
+.header-2{
 	padding: 15px;
 	background-color: #0097f6;
 }
@@ -151,7 +165,6 @@ margin-bottom: 10px;
 	cursor: pointer;
 	position: fixed;
 	left: 15px;
-	top: 25px;
 	width: 20px;
 	height: 12px;
 	z-index: 20;
@@ -194,14 +207,16 @@ margin-bottom: 10px;
 	align-items: center;
 }
 .header__logo-img{
-	margin: 0 20px 0 40px;
+	margin: 0px 20px 0px 40px;
 }
 .header__logo-title {
 	font-family: "Bitsumishi Pro", sans-serif;
-	font-size: 21px;
+	font-size: 2.5rem;
 	color: #fff;
 	letter-spacing: 5px;
 	text-transform: uppercase;
+	line-height: .8;
+	text-align: center;
 }
 @media(min-width: 500px){
 	.header__search{
@@ -219,19 +234,19 @@ margin-bottom: 10px;
 	content: '';
 	position: absolute;
 	display: block;
-	width: 13px;
-	height: 13px;
+	width: 15px;
+	height: 16px;
 	top: 50%;
-	left: 10px;
+	right: 10px;
 	transform: translateY(-50%);
-	background-image: url(../images/searchicon-2.svg);
+	background-image: url(../images/icons/search.svg);
+	background-repeat: no-repeat;
 }
 .search__input {
-	width: 225px;
+	width: 250px;
 	max-width: 100%;
-	height: 25px;
-	padding: 0px 10px 0px 30px;
-	border-radius: 4px;
+	padding: 8px 35px 8px 10px;
+	border-radius: 5px;
 }
 .header__menu-item {
 	display: inline-block;
@@ -300,6 +315,9 @@ margin-bottom: 10px;
 	cursor: pointer;
 	transition: all 0.8s ease 0s;
 }
+.popup__lable-tab:hover{
+
+}
 .popup__lable-tab.active{
 	background-color: #ffffffd4;
 	color: #33d684;
@@ -318,6 +336,7 @@ margin-bottom: 10px;
 	border-radius: 0px 10px 10px 10px;
 	background-color: #fff;
 	text-align: center;
+	z-index: 1;
 }
 .popup__close{
 	position: absolute;
@@ -328,7 +347,7 @@ margin-bottom: 10px;
 	text-decoration: none;
 }
 .popup-log__logo {
-	margin-bottom: 10px; 
+	margin-bottom: 20px; 
 }
 .popup-logo__img {
 	margin-bottom: 15px;
@@ -338,51 +357,76 @@ margin-bottom: 10px;
 	font: 246%/45px "Bitsumishi Pro", sans-serif;
 	letter-spacing: 3.7px;
 }
-.popup__form {}
-/*.popup__lable {
+.popup__group{
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.popup__lable{
 	position: absolute;
 	top: 0;
+	left: 0;
 	z-index: -1;
-	color: #33d684;
+	color: #0097f6;
 	transition: .3s;
-}*/
+}
 .popup__input{
 	width: 100%;
-	margin-top: 15px;
+	font-size: 16px;
+	letter-spacing: 1px;
 	padding-bottom: 7px;
 	background-color: transparent;
+	outline: none;
 	border-bottom: 1px solid #0097f6;
 	transition: .3s;
 }
 .popup__input:focus{
-	border-bottom: 1px solid #33d684;
+	border-bottom: 1px solid #f9bc6d;
 }
-/*.popup__input:focus ~ .popup__lable{
-	top: -18px;
+.popup__input:focus ~ .popup__lable,
+.popup__input:not(:placeholder-shown) ~ .popup__lable{
+	top: -16px;
 	font-size: 12px;
-	сolor: ##33d684;
-}*/
-.popup__input::placeholder{
+	color: #0097f6b8;
+}
+/*.popup__input::placeholder{
 	padding-bottom: 5px;
 	color: #0097f6;
 	font: 1.4rem/23px 'Roboto', sans-serif;
 	font-weight: 300;
 	letter-spacing: 1.4px;
 	text-align: left;
+}*/
+.popup__wrap-btn{
+	background-color: white;
+	padding: 3px;
+	border: 1px solid #f9bc6d;
+	margin-bottom: 20px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 2px 5px rgba(0,0,0, 0.2);
+	-moz-box-shadow: 0px 2px 5px rgba(0,0,0, 0.2);
+	-khtml-box-shadow: 0px 2px 5px rgba(0,0,0, 0.2);
+	box-shadow: 0px 2px 5px rgba(0,0,0, 0.2);
+	transition: .3s;
 }
 .btn-popup {
 	display: block;
 	width: 100%;
-	padding: 4px 10px 3px;
-	border-radius: 6px;
-	color: #e7edef;
+	padding: 7px 10px;
+	border-radius: 4px;
+	font-weight: 700;
+	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	letter-spacing: 1.4px;
 	line-height: 23px;
-	background-color: #33d684;
-	margin: 17px 0 20px;
+	background-color: rgb(255, 102, 0);
+	text-shadow: 0 0 0 transparent, 0px 0px 3px rgba(0,0,0, 0.5);
 	transition: .3s;
+}
+.popup__wrap-btn:focus,
+.popup__wrap-btn:hover{
+	border-color: rgba(0, 113, 240, 0.7);
 }
 .btn-popup:focus,
 .btn-popup:hover{

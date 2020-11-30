@@ -157,4 +157,5 @@ document.querySelectorAll('.popup__lable-tab').forEach((item) =>
 	})
 );
 document.querySelector('.popup__lable-tab').click();
+
 })
